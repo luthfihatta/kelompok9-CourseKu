@@ -87,7 +87,7 @@ include '../inc/config.php';
                             </a>
                             <a href="hapussis.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
-                                <i class="bi bi-trash"></i> Delete
+                                <i class="bi bi-trash"></i> Hapus
                             </a>
                         </div>
                     </td>
