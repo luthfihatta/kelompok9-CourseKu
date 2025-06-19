@@ -67,6 +67,9 @@ $formatted_min = 'Rp ' . number_format($min_price, 0, ',', '.');
                     <li class="nav-item">
                         <a class="nav-link" href="../siswa/tampilsis.php">Siswa</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pendaftaran/tampilpen.php">Pendaftaran</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -8,6 +8,7 @@ include '../inc/config.php';
 
 <head>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,12 +90,12 @@ include '../inc/config.php';
                     <td><?php echo $row['status_pembayaran']; ?></td>
                     <td>
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="editpen.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-success">
-                                <i class="bi bi-pencil-square"></i> Edit
+                            <a href="edit.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-success">
+                                <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a href="hapuspen.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-danger"
+                            <a href="hapus.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
-                                <i class="bi bi-trash"></i> Delete
+                                <i class="bi bi-trash"></i>
                             </a>
                         </div>
                     </td>

@@ -91,6 +91,9 @@ $formatted_avg = 'Rp ' . number_format($stats['avg_harga'], 0, ',', '.');
                     <li class="nav-item">
                         <a class="nav-link" href="siswa/tampilsis.php">Siswa</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pendaftaran/tampilpen.php">Pendaftaran</a>
+                    </li>
                 </ul>
             </div>
         </div>
