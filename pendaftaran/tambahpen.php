@@ -43,7 +43,7 @@ include "../inc/config.php";
     </nav>
 
     <div class="container">
-        <h1 class="mb-5 mt-5">Form Tambah Pendaftaran</h1>
+        <h1 class="mb-5 mt-5">Form Tambah Siswa</h1>
 
         <form action="insertsis.php" method="post">
 

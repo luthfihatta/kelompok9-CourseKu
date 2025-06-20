@@ -1,6 +1,7 @@
 <?php
 include '../inc/config.php';
-
+include '../inc/functions.php';
+$total_pendapatan = hitungJumlahPendapatan($conn);
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,25 @@ include '../inc/config.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CourseKu</title>
+    <style>
+        .summary-card {
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-title {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+        }
+
+        .summary-value {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,8 +65,18 @@ include '../inc/config.php';
     </nav>
 
     <div class="container">
-        <h1 class="mb-2 mt-5">Data Pendaftaran</h1>
-        <a href="tambahsis.php"><button type="button" class="btn btn-primary mb-4 mt-3">Tambah Data</button></a>
+        <h1 class="mb-4 mt-5">Data Pendaftaran</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6 text-white">
+                <div class="summary-card text-white" style="background-color:rgb(18, 191, 27);">
+                    <div class="summary-title "><i class="bi bi-cash"></i> Total Pendapatan </div>
+                    <div class="summary-value"><?= $total_pendapatan?></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="tambahsis.php"><button type="button" class="btn btn-primary mb-4 mt-1">Tambah Data</button></a>
 
         <table class="table table-bordered table-hover table-striped shadow rounded">
             <thead>
