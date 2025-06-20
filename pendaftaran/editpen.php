@@ -34,47 +34,50 @@ include "../inc/config.php";
                     <li class="nav-item">
                         <a class="nav-link" href="tampilsis.php">Siswa</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pendaftaran/tampilpen.php">Pendaftaran</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <h1 class="mb-5 mt-5">Form Edit Siswa</h1>
+        <h1 class="mb-5 mt-5">Form Edit Pendaftaran</h1>
 
         <?php
             $kode = $_GET['kode'];
-            $data = mysqli_query($conn,"SELECT * FROM siswa WHERE id_siswa='$kode'");
+            $data = mysqli_query($conn,"SELECT * FROM pendaftaran WHERE id_pendaftaran='$kode'");
             while ($row = mysqli_fetch_array($data)) {
         ?>
 
-        <form action="updatesis.php" method="post">
-            <input type="hidden" name="id_siswa" value="<?php echo $row['id_siswa']; ?>">
+        <form action="updatepen.php" method="post">
+            <input type="hidden" name="id_pendaftaran" value="<?php echo $row['id_pendaftaran']; ?>">
 
             <div class="mb-3 row">
-                <label for="nama" class="col-sm-2 col-form-label">
-                    Nama Siswa
+                <label for="idkursus" class="col-sm-2 col-form-label">
+                    ID Kursus
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="nama" placeholder="Ex : Budi Santos" value="<?php echo $row['nama']?>">
+                    <input class="form-control" type="text" name="idkursus" placeholder="Ex : 1">
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="email" class="col-sm-2 col-form-label">
-                    Email
+                <label for="idsiswa" class="col-sm-2 col-form-label">
+                    ID Siswa
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="email" placeholder="Ex : sigma@example.com" value="<?php echo $row['email']?>">
+                    <input class="form-control" type="text" name="idsiswa" placeholder="Ex : 3">
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="telepon" class="col-sm-2 col-form-label">
-                    Telepon
+                <label for="status" class="col-sm-2 col-form-label">
+                    Status Pembayaran
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="telepon" placeholder="Ex : 0812-3456-7890" value="<?php echo $row['no_telepon']?>">
+                    <input class="form-control" type="text" name="status" placeholder="Ex : LUNAS / GAGAL / PENDING">
                 </div>
             </div>
 

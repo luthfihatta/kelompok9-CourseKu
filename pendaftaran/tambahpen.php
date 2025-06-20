@@ -43,34 +43,34 @@ include "../inc/config.php";
     </nav>
 
     <div class="container">
-        <h1 class="mb-5 mt-5">Form Tambah Siswa</h1>
+        <h1 class="mb-5 mt-5">Form Tambah Pendaftaran</h1>
 
-        <form action="insertsis.php" method="post">
+        <form action="insertpen.php" method="post">
 
             <div class="mb-3 row">
-                <label for="nama" class="col-sm-2 col-form-label">
-                    Nama Siswa
+                <label for="idkursus" class="col-sm-2 col-form-label">
+                    ID Kursus
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="nama" placeholder="Ex : Sutomo">
+                    <input class="form-control" type="text" name="idkursus" placeholder="Ex : 1">
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="email" class="col-sm-2 col-form-label">
-                    Email Siswa
+                <label for="idsiswa" class="col-sm-2 col-form-label">
+                    ID Siswa
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="email" placeholder="Ex : sutomo@example.com">
+                    <input class="form-control" type="text" name="idsiswa" placeholder="Ex : 3">
                 </div>
             </div>
 
             <div class="mb-3 row">
-                <label for="telepon" class="col-sm-2 col-form-label">
-                    Nomor Telepon
+                <label for="status" class="col-sm-2 col-form-label">
+                    Status Pembayaran
                 </label>
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="telepon" placeholder="Ex : 08XX-XXXX-XXXX">
+                    <input class="form-control" type="text" name="status" placeholder="Ex : LUNAS / GAGAL / PENDING">
                 </div>
             </div>
 

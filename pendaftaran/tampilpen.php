@@ -76,7 +76,7 @@ $total_pendapatan = hitungJumlahPendapatan($conn);
             </div>
         </div>
 
-        <a href="tambahsis.php"><button type="button" class="btn btn-primary mb-4 mt-1">Tambah Data</button></a>
+        <a href="tambahpen.php"><button type="button" class="btn btn-primary mb-4 mt-1">Tambah Data</button></a>
 
         <table class="table table-bordered table-hover table-striped shadow rounded">
             <thead>
@@ -120,10 +120,10 @@ $total_pendapatan = hitungJumlahPendapatan($conn);
                     <td><?php echo $row['status_pembayaran']; ?></td>
                     <td>
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="edit.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-success">
+                            <a href="editpen.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-success">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a href="hapus.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-danger"
+                            <a href="hapuspen.php?kode=<?php echo $row['id_pendaftaran'] ?>" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
                                 <i class="bi bi-trash"></i>
                             </a>

@@ -86,10 +86,10 @@ include '../inc/config.php';
                     <td><?php echo $row['no_telepon']; ?></td>
                     <td>
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="edit.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-success">
+                            <a href="editsis.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-success">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a href="hapus.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-danger"
+                            <a href="hapussis.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
                                 <i class="bi bi-trash"></i>
                             </a>
