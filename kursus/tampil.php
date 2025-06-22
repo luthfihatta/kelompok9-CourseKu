@@ -5,13 +5,11 @@ include '../inc/config.php';
 $data = mysqli_query($conn, 'SELECT * FROM kursus');
 
 //MAX dan MIN
-$query_price = mysqli_query($conn, 'SELECT MAX(harga) as max_price, MIN(harga) as min_price FROM kursus');
+$query_price = mysqli_query($conn, 'SELECT * FROM view_harga_kursus');
 $price_data = mysqli_fetch_assoc($query_price);
-$max_price = $price_data['max_price'];
-$min_price = $price_data['min_price'];
 
-$formatted_max = 'Rp ' . number_format($max_price, 0, ',', '.');
-$formatted_min = 'Rp ' . number_format($min_price, 0, ',', '.');
+$formatted_max = $price_data['harga_tertinggi'];
+$formatted_min = $price_data['harga_terendah'];
 
 ?>
 
