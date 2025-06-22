@@ -1,7 +1,9 @@
 <?php
 include '../inc/config.php';
 include '../inc/functions.php';
-$total_pendapatan = hitungJumlahPendapatan($conn);
+
+//memanggil function total pendapatan
+$total_pen = hitungJumlahPendapatan($conn);
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +73,7 @@ $total_pendapatan = hitungJumlahPendapatan($conn);
             <div class="col-md-6 text-white">
                 <div class="summary-card text-white" style="background-color:rgb(18, 191, 27);">
                     <div class="summary-title "><i class="bi bi-cash"></i> Total Pendapatan </div>
-                    <div class="summary-value"><?= $total_pendapatan?></div>
+                    <div class="summary-value"><?= $total_pen?></div>
                 </div>
             </div>
         </div>
