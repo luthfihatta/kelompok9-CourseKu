@@ -76,8 +76,7 @@ $formatted_avg = 'Rp ' . number_format($stats['avg_harga'], 0, ',', '.');
             <a class="navbar-brand" href="#">
                 <h2>CourseKu</h2>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">

@@ -2,6 +2,8 @@
 include "../inc/config.php";
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +34,7 @@ include "../inc/config.php";
                         <a class="nav-link" href="../kursus/tampil.php">Kursus</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tampilsis.php">Siswa</a>
+                        <a class="nav-link" href="../siswa/tampilsis.php">Siswa</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../pendaftaran/tampilpen.php">Pendaftaran</a>
@@ -49,11 +51,25 @@ include "../inc/config.php";
 
             <div class="mb-3 row">
                 <label for="idkursus" class="col-sm-2 col-form-label">
-                    ID Kursus
+                    Nama Kursus
                 </label>
+
+                
+
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="idkursus" placeholder="Ex : 1">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Nama Kursus</option>
+
+                         <?php $data = mysqli_query($conn, 'SELECT * FROM kursus');
+                    while ($row = mysqli_fetch_array($data)) {
+                    ?>
+                        <option value="<?php echo $row['id_kursus'];?>"> </option>
+                    <?php }?>  
+                    </select>
+                    
                 </div>
+
+                
             </div>
 
             <div class="mb-3 row">
