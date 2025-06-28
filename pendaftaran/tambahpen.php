@@ -54,31 +54,40 @@ include "../inc/config.php";
                     Nama Kursus
                 </label>
 
-                
-
                 <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Nama Kursus</option>
+                    <select class="form-select" aria-label="Default select example" name="idkursus">
+                        <option selected>Pilih Nama Kursus</option>
 
                          <?php $data = mysqli_query($conn, 'SELECT * FROM kursus');
                     while ($row = mysqli_fetch_array($data)) {
                     ?>
-                        <option value="<?php echo $row['id_kursus'];?>"> </option>
+                        <option type="submit" name="kursus" value="<?php echo $row['id_kursus'];?>" ><?php echo $row['judul'];?> </option>
                     <?php }?>  
                     </select>
-                    
-                </div>
-
-                
+                    </div>    
             </div>
 
-            <div class="mb-3 row">
-                <label for="idsiswa" class="col-sm-2 col-form-label">
-                    ID Siswa
+           <div class="mb-3 row">
+                <label for="idkursus" class="col-sm-2 col-form-label">
+                    Nama Siswa
                 </label>
+
+                
+
                 <div class="col-sm-10">
-                    <input class="form-control" type="text" name="idsiswa" placeholder="Ex : 3">
-                </div>
+                    <select class="form-select" aria-label="Default select example" name="idsiswa">
+                        <option selected>Pilih Nama Siswa</option>
+
+                         <?php $data = mysqli_query($conn, 'SELECT * FROM siswa');
+                    while ($row = mysqli_fetch_array($data)) {
+                    ?>
+
+                        <option value="<?php echo $row['id_siswa'];?>"><?php echo $row['nama'];?> </option>
+
+
+                    <?php }?>  
+                    </select>
+                    </div>    
             </div>
 
             <div class="mb-3 row">
@@ -100,6 +109,7 @@ include "../inc/config.php";
                     </button>
                 </div>
             </div>
+
         </form>
     </div>
 </body>

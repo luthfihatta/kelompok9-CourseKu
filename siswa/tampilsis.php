@@ -79,11 +79,21 @@ include '../inc/config.php';
                         <center><?php echo $no++; ?></center>
                     </td>
                     <td>
+
                         <center><?php echo $row['id_siswa']; ?></center>
                     </td>
-                    <td><?php echo $row['nama']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['no_telepon']; ?></td>
+
+                    <td>
+                        <?php echo $row['nama']; ?>
+                    </td>
+
+                    <td>
+                        <?php echo $row['email']; ?>
+                    </td>
+
+                    <td>
+                        <?php echo $row['no_telepon']; ?>
+                    </td>
                     <td>
                         <div class="d-flex justify-content-center gap-2">
                             <a href="editsis.php?kode=<?php echo $row['id_siswa'] ?>" class="btn btn-sm btn-success">
