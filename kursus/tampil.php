@@ -75,6 +75,9 @@ $formatted_min = $price_data['harga_terendah'];
 
     <div class="container">
         <h1 class="mb-4 mt-5">Data Kursus</h1>
+        <a href="riwayathapus.php" class="btn btn-secondary mb-4">
+            <i class="bi bi-clock-history"></i> Lihat Riwayat Kursus
+        </a>
 
         <div class="row mb-4">
             <div class="col-md-6 text-white">
