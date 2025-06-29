@@ -1,9 +1,10 @@
 <?php
 include '../inc/config.php';
-include '../inc/functions.php';
 
-//memanggil function total pendapatan
-$total_pen = hitungJumlahPendapatan($conn);
+$query = "SELECT hitung_total_pendapatan() AS total";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+$total_pen = 'Rp ' . number_format($row['total'], 0, ',', '.');
 ?>
 
 <!DOCTYPE html>
